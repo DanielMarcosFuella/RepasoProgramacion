@@ -1,17 +1,18 @@
-function numeroPar(numeros:number[]) {
-    let resultado:string
-    let i=0
-    while (numeros[i-1]%2 != 0 && i < numeros.length){
-        if (numeros[i]%2 !=0){
-            resultado="No hay numero par"
+function numeroPar(numeros:number[])  {
+    let resultado:boolean
+     resultado = false
+     let mensaje:string
+     mensaje="No hay un numero Par"
+     let i:number
+     i=0
+    do{
+        if (numeros[i]%2 == 0){
+            mensaje="Hay un numero par"
+            resultado=true
         }
-        else{
-            resultado = "Hay un numero par"
-        }
-    
         i++
     }
-    return console.log (resultado)
+    while(resultado===false && i<numeros.length)
+    return console.log (mensaje)
 }
-numeroPar([1, 1, 3, 11, 5, 11, 7, 15, 9, 2])
-
+numeroPar([1, 1, 3, 11, 5, 11, 7, 15, 2])

@@ -1,11 +1,15 @@
 function nombresConM(nombres:string[]) {
-    let resultado:Boolean
+    let resultado:boolean
     resultado=true
-    for (let i=0; i<nombres.length;i++){
-        if (nombres[i][0] != "M"){
+    let i:number
+    i=0
+    do {
+        if (nombres[i][0]!="M"){
             resultado=false
         }
+        i++
     }
+    while(resultado && i<nombres.length)
     return resultado
 }
 console.log (nombresConM(["Manolo", "Maco", "Maria del Carmen"]))
